@@ -1,0 +1,23 @@
+lose_army_tradition = {
+	trigger = {
+		army_tradition = 5
+	}
+	
+	effect = {
+		if = {
+			limit = { halved_parliament_bribes = yes }
+			add_army_tradition = -2
+		}
+		else = {
+			add_army_tradition = -5
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_at_war = yes
+		}
+	}
+}

@@ -1,0 +1,26 @@
+pay_institutiongrowth = {
+	trigger = {
+		FROM = {
+			current_institution = 5
+			NOT = { current_institution = 100 }
+		}
+	}
+	
+	effect = {
+		if = {
+			limit = { halved_parliament_bribes = yes }
+			FROM = {
+				add_next_institution_embracement = -2
+			}
+		}
+		else = {
+			FROM = {
+				add_next_institution_embracement = -5
+			}
+		}
+	}
+	
+	ai_will_do = {
+		factor = 1
+	}
+}
